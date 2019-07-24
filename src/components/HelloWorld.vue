@@ -35,6 +35,29 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  methods: {
+    shuffle (array) {
+      for (let i = array.length - 1; i >= 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1))
+        // console.log('i:'+ i + 'j:' +j)
+        let temp = array[i]
+        array[i] = array[j]
+        array[j] = temp
+        // [array[i], array[j]] = [array[j], array[i]]
+      }
+    }
+  },
+  created () {
+    var poker = Array.from(new Array(52)).map((_, index) => {
+      return index + 1
+    })
+    // for (var i = 1; i <= poker.length; i++) {
+    //   poker[i - 1] = i
+    // }
+    console.log(poker)
+    this.shuffle(poker)
+    console.log(poker)
   }
 }
 </script>
