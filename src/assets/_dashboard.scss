@@ -1,0 +1,15 @@
+body {
+  font-family: 'Oleo Script', cursive !important;
+  overflow: hidden;
+  color: $primary;
+  background-color: $secondary;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+// 隱藏滾動條
+// .overflow-auto::-webkit-scrollbar {
+//   display: none;
+// }
